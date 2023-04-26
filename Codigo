@@ -178,10 +178,8 @@ char expression[MAX_SIZE];
 char infix[MAX_SIZE], postfix[MAX_SIZE], prefix[MAX_SIZE];
 int choice;
 double result;
-printf("Escolha o tipo de notação da expressão:\n");
-printf("1. Infixa\n");
-printf("2. Pós-fixa\n");
-printf("3. Pré-fixa\n");
+printf("Escolha a opcao 1 e insira a expressão:\n");
+printf("1. iniciar\n");
 scanf("%d", &choice);
 printf("Digite a expressão: ");
 scanf("%s", expression);
@@ -196,7 +194,7 @@ result = evaluate_postfix(postfix);
 break;
 case 2:
 strcpy(postfix, expression);
-postfix_to_infix(postfix, infix);
+
 printf("Expressão infixa: %s\n", infix);
 infix_to_prefix(infix, prefix);
 printf("Expressão pré-fixa: %s\n", prefix);
@@ -204,7 +202,7 @@ result = evaluate_postfix(postfix);
 break;
 case3:
 strcpy(prefix, expression);
-prefix_to_infix(prefix, infix);
+
 printf("Expressão infixa: %s\n", infix);
 infix_to_postfix(infix, postfix);
 printf("Expressão pós-fixa: %s\n", postfix);
